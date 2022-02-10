@@ -17,12 +17,13 @@ Feature: Register_User_Functionality
       And user fills details2
       And user clicks create account button
       Then user verifies that acount is created
-#
-#      Scenario: TC01_delete_account
-        When user clicks continue button
-#        And user verifies that logged in
-#        And user clicks delete account button
-#        Then user verifies that acount deleted
+      When user clicks continue button
+
+  Scenario: TC01_delete_account
+
+    And user verifies that logged in
+    Then user clicks delete account button
+    Then user verifies that acount deleted
 
 
 

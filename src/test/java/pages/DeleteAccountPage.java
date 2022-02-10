@@ -6,9 +6,19 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
 public class DeleteAccountPage {
+
     public DeleteAccountPage() {
-        PageFactory.initElements(Driver.getDriver(),this);
+
+        PageFactory.initElements(Driver.getDriver(), this);
     }
 
+    @FindBy(xpath = "//*[@class='btn btn-primary']")
+    public WebElement continueButton;
+
+    @FindBy(xpath = "//*[text()=' Logged in as ']")
+    public WebElement loggedinText;
+
+    @FindBy(xpath = "//*[text()=' Delete Account']")
+    public WebElement deleteButton;
 
 }

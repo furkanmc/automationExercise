@@ -6,14 +6,17 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
 public class FillDetailsPage {
+
     public FillDetailsPage() {
+
         PageFactory.initElements(Driver.getDriver(),this);
     }
-    @FindBy(id="uniform-id_gender1")
+
+    @FindBy(id= "uniform-id_gender1")
     public WebElement genderBox;
 
-    @FindBy(id="password")
-    public WebElement passwordBox;
+    @FindBy(id= "password")
+    public WebElement passwodBox;
 
     @FindBy(id="days")
     public WebElement dayDropdown;
@@ -24,19 +27,19 @@ public class FillDetailsPage {
     @FindBy(id="years")
     public WebElement yearDropdown;
 
-    @FindBy(id="newsletter")
+    @FindBy(xpath = "//*[@id='newsletter']")
     public WebElement newsletterSignupBox;
 
     @FindBy(id="optin")
     public WebElement specialOfferBox;
 
     @FindBy(id="first_name")
-    public  WebElement firstNameBox;
+    public WebElement firstNameBox;
 
     @FindBy(id="last_name")
     public WebElement lastNameBox;
 
-    @FindBy(id="company")
+    @FindBy(id= "company")
     public WebElement companyBox;
 
     @FindBy(id="address1")
@@ -55,20 +58,12 @@ public class FillDetailsPage {
     public WebElement zipcodeBox;
 
     @FindBy(id="mobile_number")
-    public  WebElement mobileNumberBox;
+    public WebElement mobileNumberBox;
 
-    @FindBy(xpath="//*[@data-qa='create-account']")
-    public  WebElement createAccountButton;
+    @FindBy(xpath = "(//*[@type='submit'])[1]")
+    public WebElement createAccountButton;
 
-    @FindBy(xpath="//*[text()='Account Created!']")
-    public WebElement verifySignupText;
-
-    @FindBy(xpath="//a[@class='btn btn-primary']")
-    public WebElement continueButton;
-
-
-
-
-
+    @FindBy(xpath = "//*[text()='Account Created!']")
+    public WebElement accountCreatedText;
 
 }
